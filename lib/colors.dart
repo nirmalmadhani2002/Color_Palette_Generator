@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+import 'package:provider/provider.dart';
+
+import 'controllers/theme_provider.dart';
 
 class ColorsA extends StatefulWidget {
   @override
@@ -14,6 +17,15 @@ class _ColorsAState extends State<ColorsA> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.light_mode),
+            onPressed: () {
+              Provider.of<ThemeProvider>(context, listen: false)
+                  .changeTheme();
+            },
+          ),
+        ],
         title: Text('Color Palette Generator'),
       ),
       body: Center(

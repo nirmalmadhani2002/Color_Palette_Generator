@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+import 'package:provider/provider.dart';
+
+import 'controllers/theme_provider.dart';
 
 class Homepg extends StatefulWidget {
   @override
@@ -15,6 +18,15 @@ class _HomepgState extends State<Homepg> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.light_mode),
+            onPressed: () {
+              Provider.of<ThemeProvider>(context, listen: false)
+                  .changeTheme();
+            },
+          ),
+        ],
         title: Text('Pigments'),
       ),
       body: Column(
@@ -78,7 +90,6 @@ class _HomepgState extends State<Homepg> {
                   _currentColor = color;
                 });
               },
-              showLabel: true,
               pickerAreaHeightPercent: 0.8,
             ),
           ),

@@ -1,4 +1,3 @@
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'Homepg.dart';
@@ -46,9 +45,17 @@ class _HomaPageState extends State<HomaPage> {
       bottomNavigationBar: CurvedNavigationBar(
         index: 0,
         height: 60.0,
-        items: [
-          Icon(Icons.home_outlined, size: 30),
-          Icon(Icons.color_lens_outlined, size: 30),
+        items: const [
+          Icon(
+            Icons.home_outlined,
+            size: 30,
+            color: Colors.grey,
+          ),
+          Icon(
+            Icons.color_lens_outlined,
+            size: 30,
+            color: Colors.grey,
+          ),
         ],
         color: Colors.grey.shade200,
         buttonBackgroundColor: Colors.white,
