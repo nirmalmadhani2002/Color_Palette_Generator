@@ -1,16 +1,35 @@
 # color_pallate_generator_app
 
-A new Flutter project.
+<div align="center">
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# **color_pallate_generator_app**
+Simple color_pallate_generator_app made with Flutter in India.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</div>
+
+<br></br>
+
+# 🪪 [License](https://docs.google.com/document/d/e/2PACX-1vRJXI9V4lJSvpdwxkZbnsp_oPkGuh8SsyiWaToaKoBfymlFfN50e4yFPbLU5KJvDaJy8DV1ughGA6hP/pub)
+copyright ©[Nirmal Madhani](https://github.com/nirmalmadhani2002).<br>
+
+<div  align="center">
+
+<img src="assets/Images/Im0.png" width="250px">
+<img src="assets/Images/Im1.png" width="250px">
+<img src="assets/Images/Im2.png" width="250px">
+<img src="assets/Images/Im3.png" width="250px">
+<img src="assets/Images/Im4.png" width="250px">
+<img src="assets/Images/Im5.png" width="250px">
+
+### Made with  IN INDIA.
+
+----
+### You can show some respct by starring ⭐ the ropository!
+----
+
+</div>
+

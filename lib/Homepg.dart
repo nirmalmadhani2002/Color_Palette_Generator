@@ -12,7 +12,7 @@ class Homepg extends StatefulWidget {
 class _HomepgState extends State<Homepg> {
   final TextEditingController _schemeNameController = TextEditingController();
   Color _currentColor = Colors.blue; // default color
-  List<Color> _schemeColors = []; // empty color scheme
+  final List<Color> _schemeColors = []; // empty color scheme
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _HomepgState extends State<Homepg> {
             },
           ),
         ],
-        title: Text('Pigments'),
+        title: const Text('Pigments'),
       ),
       body: Column(
         children: [
@@ -46,24 +46,24 @@ class _HomepgState extends State<Homepg> {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
                   child: TextField(
                     controller: _schemeNameController,
-                    decoration: InputDecoration(hintText: 'Scheme name'),
+                    decoration: const InputDecoration(hintText: 'Scheme name'),
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.add_circle_outline),
+                  icon: const Icon(Icons.add_circle_outline,size: 40,),
                   onPressed: () {
                     _addColor();
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.save),
+                  icon: const Icon(Icons.save,size: 40,),
                   onPressed: () {
                     _saveScheme();
                   },
@@ -71,6 +71,7 @@ class _HomepgState extends State<Homepg> {
               ],
             ),
           ),
+          SizedBox(height: 40,),
         ],
       ),
     );
@@ -81,7 +82,7 @@ class _HomepgState extends State<Homepg> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Choose a color'),
+          title: const Text('Choose a color'),
           content: SingleChildScrollView(
             child: ColorPicker(
               pickerColor: _currentColor,
@@ -95,13 +96,13 @@ class _HomepgState extends State<Homepg> {
           ),
           actions: [
             TextButton(
-              child: Text('CANCEL'),
+              child: const Text('CANCEL'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: Text('OK'),
+              child: const Text('OK'),
               onPressed: () {
                 Navigator.of(context).pop();
                 setState(() {
@@ -120,20 +121,20 @@ class _HomepgState extends State<Homepg> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Save scheme'),
+          title: const Text('Save scheme'),
           content: TextField(
             controller: _schemeNameController,
-            decoration: InputDecoration(hintText: 'Scheme name'),
+            decoration: const InputDecoration(hintText: 'Scheme name'),
           ),
           actions: [
             TextButton(
-              child: Text('CANCEL'),
+              child: const Text('CANCEL'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: Text('SAVE'),
+              child: const Text('SAVE'),
               onPressed: () {
                 Navigator.of(context).pop();
                 _showSnackBar('Scheme saved: ${_schemeNameController.text}');
@@ -152,7 +153,7 @@ class _HomepgState extends State<Homepg> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
       ),
     );
   }

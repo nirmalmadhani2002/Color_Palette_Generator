@@ -26,10 +26,10 @@ class _HomaPageState extends State<HomaPage> {
         return colorsA;
         break;
       default:
-        return Center(
+        return const Center(
           child: Text(
             "No page found by page chooser.",
-            style: new TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 30),
           ),
         );
     }
@@ -39,9 +39,7 @@ class _HomaPageState extends State<HomaPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
-        child: Center(child: showPage),
-      ),
+      body: Center(child: showPage),
       bottomNavigationBar: CurvedNavigationBar(
         index: 0,
         height: 60.0,
@@ -58,8 +56,7 @@ class _HomaPageState extends State<HomaPage> {
           ),
         ],
         color: Colors.grey.shade200,
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.green,
+        backgroundColor:const Color(0XFF6A62B7),
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
         onTap: (int tappedIndex) {
